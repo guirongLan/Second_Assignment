@@ -15,12 +15,12 @@ import org.junit.runners.Parameterized.Parameters;
 
 
 @RunWith(Parameterized.class)
-public class IntegerToRomanTest_Parametrized 
+public class IntegerToRomanParametrizedTest 
 {
   private String input;
   private String expectedOutput;
 
-  public IntegerToRomanTest_Parametrized(String input, String expectedOutput){
+  public IntegerToRomanParametrizedTest(String input, String expectedOutput){
     this.input=input;
     this.expectedOutput=expectedOutput;
  }
