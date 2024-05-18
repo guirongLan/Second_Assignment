@@ -17,16 +17,16 @@ import org.junit.runners.Parameterized.Parameters;
 @RunWith(Parameterized.class)
 public class IntegerToRomanTest_Parametrized 
 {
- private String input;
- private String expectedOutput;
+  private String input;
+  private String expectedOutput;
 
- public IntegerToRomanTest_Parametrized(String input, String expectedOutput){
+  public IntegerToRomanTest_Parametrized(String input, String expectedOutput){
     this.input=input;
     this.expectedOutput=expectedOutput;
  }
  
 @Parameters 
- public static Collection<String[]> testConditions() { 
+  public static Collection<String[]> testConditions() { 
   String expectedOutputs[][] = {  
     { "1", "I" },
     { "2", "II" },
@@ -71,10 +71,10 @@ public class IntegerToRomanTest_Parametrized
   return Arrays.asList(expectedOutputs); 
  } 
  
- @Test 
- public void TestIntToRoman_From_1_To_1000() { 
-  assertEquals(expectedOutput,  
-    IntegerToRoman.convert(Integer.parseInt(input)).get()); 
+  @Test 
+  public void TestIntToRoman_From_1_To_1000() { 
+    assertEquals(expectedOutput,  
+      IntegerToRoman.convert(Integer.parseInt(input)).get()); 
  }
 }
 

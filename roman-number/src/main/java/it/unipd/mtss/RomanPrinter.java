@@ -4,7 +4,7 @@ public class RomanPrinter {
 
     public static String print(int num){
 
-        return printAsciiArt(IntegerToRoman.convert(num));
+        return printAsciiArt(IntegerToRoman.convert(num).get());
 
     }
 
