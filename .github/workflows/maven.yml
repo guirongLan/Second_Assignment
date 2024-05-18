@@ -19,6 +19,9 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Build with Maven
-      run: mvn -B clean package jacoco:report
-    - name: Coveralls
+      working-directory: roman-number
+      run: mvn -B package --file pom.xml jacoco:report
+      
+    - name: Upload coverage to Coveralls
+      working-directory: roman-number
       run: mvn -B coveralls:report --define repoToken=${{ secrets.COVERALLS_TOKEN }}
